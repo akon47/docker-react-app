@@ -13,5 +13,5 @@ script:
   - docker run -e CI=true kimhwan/docker-react-app npm run test -- --coverage
 
 after_success:
-  - find . -type f | xargs -L 1 bash -c 'curl --ftp-create-dirs -T $1 -u $FTP_USER:$FTP_PASS ftp://kimhwan.kr/../../var/www/html/docker-react-app/deploy/${1##*/}' \;
+  - echo "Test Success"
 
