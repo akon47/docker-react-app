@@ -1,1 +1,0 @@
-find . -type f -exec curl -u $FTP_USER:$FTP_PASS ftp://kimhwan.kr/../../var/www/html/docker-react-app/deploy\;

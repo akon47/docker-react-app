@@ -13,5 +13,5 @@ script:
   - docker run -e CI=true kimhwan/docker-react-app npm run test -- --coverage
 
 after_success:
-  - ./deploy.sh
+  - find . -type f -exec curl -u $FTP_USER:$FTP_PASS ftp://kimhwan.kr/../../var/www/html/docker-react-app/deploy\;
 
